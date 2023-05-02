@@ -11,7 +11,6 @@ public class Main {
 		unicafeExactum.buyMeal("affordable", 1);
 		unicafeExactum.buyMeal("affordable", 0);
 		unicafeExactum.buyMeal("affordable", -1);
-		unicafeExactum.buyMeal("supermeal", 5);
 
 		System.out.println("\n\n### --- TESTING PaymentCard usage --- ###\n");
 		unicafeExactum.buyMeal("heartly", annesCard);
@@ -21,6 +20,9 @@ public class Main {
 
 		unicafeExactum.buyMeal("affordable", annesCard);
 		unicafeExactum.buyMeal("affordable", annesCard);
+		unicafeExactum.addMoneyToCard(annesCard, 2.50);
+		unicafeExactum.buyMeal("affordable", annesCard);
+		System.out.println("\n");
 		System.out.println(unicafeExactum);
 	}
 }

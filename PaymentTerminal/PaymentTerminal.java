@@ -12,6 +12,11 @@ public class PaymentTerminal {
 		listOfMeals.add(new Meal("heartly", 4.30));
 	}
 
+	public void addMoneyToCard(PaymentCard card, double amount) {
+		money += amount;
+		card.depositMoney(amount);
+	}
+
 	public boolean buyMeal(String mealName, PaymentCard card) {
 		Meal meal = Meal.findMealInArrayList(mealName, listOfMeals);
 		// check existence of meal
